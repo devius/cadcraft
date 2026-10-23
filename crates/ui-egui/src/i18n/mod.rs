@@ -227,7 +227,9 @@ pub static LANGUAGES: [Language; 17] = [
     Language { code: "tr", name: "Türkçe", source: include_str!("tr.tsv"), plural: plural_ko, plural_forms: 1, catalog: OnceLock::new() },
     // Georgian keeps a noun singular after a numeral ("5 კომიტი"), so one form, the Korean rule.
     // Its letters come from the craft-fonts `Geor` face (`theme::can_show`).
-    Language { code: "ka", name: "ქართული", source: include_str!("ka.tsv"), plural: plural_ko, plural_forms: 1, catalog: OnceLock::new() },
+    Language {
+        code: "ka", name: "ქართული", source: include_str!("ka.tsv"), plural: plural_ko, plural_forms: 1, catalog: OnceLock::new()
+    },
 ];
 
 /// BCP 47 and POSIX locale tags, including `uk-UA`, `uk_UA.UTF-8` and `pt_BR.UTF-8`.

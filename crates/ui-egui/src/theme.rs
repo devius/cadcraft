@@ -751,10 +751,7 @@ mod tests {
         // A Chinese interface takes the Han face first: a Japanese face lacks 图 园 测.
         assert_eq!(families(&super::embedded_ui_faces(&faces, "zh")), ["Han Test Face", "BIZ UDPGothic", "Noto Sans Georgian"]);
         // العربية adds the Arabic face, after the CJK ones egui's bundled faces have no glyphs for.
-        assert_eq!(
-            families(&super::embedded_ui_faces(&faces, "ar")),
-            ["BIZ UDPGothic", "Han Test Face", "Noto Sans Georgian", "Noto Sans Arabic"]
-        );
+        assert_eq!(families(&super::embedded_ui_faces(&faces, "ar")), ["BIZ UDPGothic", "Han Test Face", "Noto Sans Georgian", "Noto Sans Arabic"]);
         assert_eq!(families(&super::embedded_ui_faces(&faces, "ka")), ["BIZ UDPGothic", "Han Test Face", "Noto Sans Georgian"]);
         // Another weight is a style of a face, not an interface face of its own.
         let bold = CraftFont { family: "BIZ UDPGothic", style: "Bold", scripts: &["Jpan"], bytes: &[] };

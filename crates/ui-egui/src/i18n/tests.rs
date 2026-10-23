@@ -1237,7 +1237,8 @@ fn georgian_live_switch_keeps_drawing_and_falls_back_without_font() {
     assert_eq!(app.fonts_language, Some(app.language()));
     let text = render(&mut app, &ctx);
     if supported {
-        for label in ["თვისებები", "ფაილი", "ხედი", "ხაზვა", "ზომების დატანა", "მიუთითეთ პირველი წერტილი"] {
+        for label in ["თვისებები", "ფაილი", "ხედი", "ხაზვა", "ზომების დატანა", "მიუთითეთ პირველი წერტილი"]
+        {
             assert!(text.contains(label), "missing {label}: {text}");
         }
     } else {
