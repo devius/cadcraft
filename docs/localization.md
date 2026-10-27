@@ -127,7 +127,7 @@ follow-up work.
 
 ## Georgian (`ka`) interface
 
-Georgian has **1,439 rows**: 1,433 ordinary labels, four contextual menu headings (**ზომების
+Georgian has **1,442 rows**: 1,436 ordinary labels, four contextual menu headings (**ზომების
 დატანა** for the Dimension menu, **ზომა** for the object; **ხატვა** for Draw) and two single-form
 count templates, since a Georgian noun stays singular after a numeral ("5 კომიტი"). It covers the
 union of the existing catalogs, and no marked UI literal falls back to English. Commands are verbal
