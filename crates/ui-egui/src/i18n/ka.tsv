@@ -103,6 +103,7 @@
 	Blend	გადასვლა
 	Block	ბლოკი
 	Block Attribute Manager...	ბლოკის ატრიბუტების მენეჯერი...
+	Block Description...	ბლოკის აღწერა...
 	Block Editor	ბლოკის რედაქტორი
 	Block Reference	ბლოკის ჩასმა
 	Block...	ბლოკი...
@@ -362,6 +363,7 @@
 	Fit Points	მისადაგების წერტილები
 	Fix	ფიქსაცია
 	Flatten Objects	ობიექტების სიბრტყეზე დაგეგმილება
+	Font	შრიფტი
 	Format	ფორმატი
 	Freehand	ხელით ხაზვა
 	Freeze	გაყინვა
@@ -562,6 +564,7 @@
 	N	N
 	Name	სახელი
 	Name (A–Z)	სახელი (ა–ჰ)
+	Named Viewports...	დასახელებული ხედვის არეები...
 	Named Views...	დასახელებული ხედები...
 	Nearest	უახლოესი
 	New	ახალი
