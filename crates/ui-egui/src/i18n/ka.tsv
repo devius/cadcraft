@@ -1268,6 +1268,7 @@
 	Edit Array	მასივის რედაქტირება
 	Save changes to {name}?	შევინახო ცვლილებები ნახაზში {name}?
 	Your changes will be lost if you don't save them.	თუ ცვლილებებს არ შეინახავთ, ისინი დაიკარგება.
+	Save changes to block "{name}"?	შევინახო ცვლილებები ბლოკში „{name}“?
 	Don't Save	არ შეინახო
 	Close Array Editing	მასივის რედაქტირების დახურვა
 	Multiline...	მულტიხაზი...
@@ -1296,6 +1297,8 @@
 	Automatic save every	ავტომატური შენახვა ყოველ
 	min	წთ
 	Automatic save file location	ავტომატური შენახვის ფაილის მდებარეობა
+	Backup copy	სარეზერვო ასლი
+	Create backup copy with each save	სარეზერვო ასლის შექმნა ყოველი შენახვისას
 	Drawings with no file yet are saved in the default version. 0 minutes turns automatic save off.	ჯერ ფაილის არმქონე ნახაზები ნაგულისხმევ ვერსიაში ინახება. 0 წუთი ავტომატურ შენახვას გამორთავს.
 	Time-sensitive right-click: a quick click is Enter, holding opens the menu	დროზე დამოკიდებული მარჯვენა დაწკაპება: მოკლე დაწკაპება Enter-ია, დაჭერით გაიხსნება მენიუ
 	Turned off, a right-click while a command runs always opens the shortcut menu.	გამორთვისას ბრძანების შესრულების დროს მარჯვენა დაწკაპება ყოველთვის კონტექსტურ მენიუს ხსნის.
