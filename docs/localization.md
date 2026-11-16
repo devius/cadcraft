@@ -1,8 +1,7 @@
 # Interface languages
 
 Choose **Edit → Interface Language** and select **Auto (system language)**, **English**,
-**Українська**, **Português (Brasil)**, **Deutsch**, **Español**, **Čeština** (Czech), **Русский**, **Français**, **简体中文**, **Italiano**, **한국어** (Korean), **Svenska** (Swedish), **العربية** (Arabic), **Magyar** (Hungarian), **Türkçe** (Turkish), **Ελληνικά** (Greek), or **ქართული** (Georgian).
-**Українська**, **Português (Brasil)**, **Deutsch**, **Español**, **Čeština** (Czech), **Русский**, **Français**, **简体中文**, **Italiano**, **한국어** (Korean), **Svenska** (Swedish), **العربية** (Arabic), **Magyar** (Hungarian), **Türkçe** (Turkish), **Ελληνικά** (Greek), **Bosanski** (Bosnian), or **ქართული** (Georgian).
+**Українська**, **Português (Brasil)**, **Deutsch**, **Español**, **Čeština** (Czech), **Русский**, **Français**, **简体中文**, **Italiano**, **한국어** (Korean), **Svenska** (Swedish), **العربية** (Arabic), **Magyar** (Hungarian), **Türkçe** (Turkish), **Ελληνικά** (Greek), **Bosanski** (Bosnian), **ქართული** (Georgian), or **Tiếng Việt** (Vietnamese).
 The interface updates without restarting, including the native macOS menus.
 The choice is saved with the other interface preferences (`cadcraft.prefs`, beside the theme):
 eframe storage on the desktop, browser local storage on the web. Installations without a saved
@@ -23,8 +22,7 @@ Automation can select the language through the existing control channel:
 ```
 
 The `ui.set` method also accepts `{"interfaceLanguage":"cs"}`. Supported values are `auto`,
-`en`, `uk`, `pt-BR`, `de`, `es`, `cs`, `ru`, `fr`, `zh`, `it`, `ko`, `sv`, `ar`, `hu`, `tr`, `el`, and `ka`; invalid values are rejected without changing the current
-`en`, `uk`, `pt-BR`, `de`, `es`, `cs`, `ru`, `fr`, `zh`, `it`, `ko`, `sv`, `ar`, `hu`, `tr`, `bs`, `el`, and `ka`; invalid values are rejected without changing the current
+`en`, `uk`, `pt-BR`, `de`, `es`, `cs`, `ru`, `fr`, `zh`, `it`, `ko`, `sv`, `ar`, `hu`, `tr`, `bs`, `el`, `ka`, and `vi`; invalid values are rejected without changing the current
 selection. Resetting palettes keeps the language choice.
 
 ## Translation coverage
@@ -35,8 +33,8 @@ dialogs, and the About window's controls. The command reference can be searched 
 command ID, English label, or translated label. A missing entry falls back to English and
 never fails a build; `cargo xtask i18n` (a step of `cargo xtask ci`) lists each language's.
 
-Czech has 1,202 catalog rows, covering the reference catalog and every marked UI
-literal, including Options. Four `menu` entries distinguish menu headings from object/command
+Czech has 1,215 catalog rows (counted 2026-10-24), covering the reference catalog and every marked UI
+literal when it landed, including Options. Four `menu` entries distinguish menu headings from object/command
 labels: **Zobrazení / Pohled**, **Kreslení / Kreslit**, **Kótování / Kóta**, and **Modifikace / Upravit**.
 The translation is AI-assisted work by @Losminek, reviewed against Czech desktop and CAD UI
 conventions and an independent review pass; it has not yet been proofread by a native speaker.
@@ -106,9 +104,6 @@ Hangul can't be shown. This change does not fix platform IME issues or localize 
 The bundled egui fonts have no Georgian letters. Georgian is drawn with the Noto Sans Georgian face
 (`Geor`) of the craft-fonts build input, which release builds embed (`craft-fonts-ref` in the
 workflows, and `web-craft-fonts` for the web build, whose embedded faces include it). The face loads
-in every interface language, so the picker shows **ქართული**. A build without craft-fonts keeps the
-saved `ka` choice but shows the interface in English, names the language **Georgian** in the picker,
-and the language command reports that a Georgian font is needed.
 in every interface language, so Georgian text (file, layout and layer names, labels) draws. A build
 without craft-fonts has no Georgian face.
 
@@ -131,7 +126,6 @@ follow-up work.
 
 ## Georgian (`ka`) interface
 
-Georgian has **1,443 rows**: 1,437 ordinary labels, four contextual menu headings (**ზომების
 Georgian has **1,458 rows**: 1,452 ordinary labels, four contextual menu headings (**ზომების
 დატანა** for the Dimension menu, **ზომა** for the object; **ხატვა** for Draw) and two single-form
 count templates, since a Georgian noun stays singular after a numeral ("5 კომიტი"). It covers the
@@ -139,10 +133,6 @@ union of the existing catalogs, and no marked UI literal falls back to English. 
 nouns (**შენახვა**, **შემობრუნება**); prompts read "მიუთითეთ …" for Specify, "შეიყვანეთ …" for
 Enter and "მონიშნეთ …" for Select, and clickable keywords keep the spelling the engine accepts.
 Georgian has no letter case, so nothing is capitalised, and Mtavruli (a display style, not upper
-case) never appears; a test checks that. The translation is original, AI-assisted work written from
-the English strings with Georgian technical-drawing vocabulary (შრე, დაშტრიხვა, მომრგვალება, ფასკა,
-წანაცვლება, ობიექტზე მიბმა, ხედვის არე); no other product's localization was consulted. Native
-proofreading of the running app is still to do.
 case) never appears; a test checks that. The translation is original: written with Claude Code from
 the meaning of each English string, with Georgian technical-drawing vocabulary (შრე, დაშტრიხვა,
 მომრგვალება, ფასკა, წანაცვლება, ობიექტზე მიბმა, ხედვის არე); terminology and doubtful strings
